@@ -1,0 +1,717 @@
+<!doctype html>
+
+<html class="dark" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-sinco.svg" />
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="bg-background-dark font-display text-slate-300 antialiased overflow-x-hidden"
+  >
+    <div class="relative flex min-h-screen flex-col">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-50 w-full border-b border-slate-800 bg-background-dark/90 backdrop-blur-md"
+      >
+        <div
+          class="container mx-auto px-4 md:px-10 lg:px-40 flex h-16 items-center justify-between"
+        >
+          <div class="flex items-center gap-3">
+            <img
+              alt="Phúc Nguyễn Sinco Logo"
+              class="h-8 w-auto"
+              data-alt="Industrial equipment company logo design"
+              src="./assets/favicon-sinco.svg"
+            />
+            <span class="text-lg font-bold tracking-tight text-white"
+              >Phúc Nguyễn Sinco</span
+            >
+          </div>
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-sm font-medium hover:text-brand-blue transition-colors text-slate-300"
+              href="#san-pham"
+              >Sản Phẩm</a
+            >
+            <a
+              class="text-sm font-medium hover:text-brand-blue transition-colors text-slate-300"
+              href="#gioi-thieu"
+              >Giới Thiệu</a
+            >
+            <a
+              class="text-sm font-medium hover:text-brand-blue transition-colors text-slate-300"
+              href="#lien-he"
+              >Liên Hệ</a
+            >
+          </nav>
+          <!-- Mobile Hamburger -->
+          <button
+            id="menu-toggle"
+            class="md:hidden text-white p-1.5 sm:p-2 -mr-2"
+            aria-label="Mở menu"
+          >
+            <span class="material-symbols-outlined text-xl sm:text-2xl"
+              >menu</span
+            >
+          </button>
+        </div>
+        <!-- Mobile Nav Drawer -->
+        <nav
+          id="mobile-nav"
+          class="hidden md:hidden border-t border-slate-800 bg-background-dark/95 backdrop-blur-md"
+        >
+          <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+            <a
+              class="text-sm font-medium text-slate-300 hover:text-brand-blue transition-colors py-2"
+              href="#san-pham"
+              onclick="closeMobileNav()"
+              >Sản Phẩm</a
+            >
+            <a
+              class="text-sm font-medium text-slate-300 hover:text-brand-blue transition-colors py-2"
+              href="#gioi-thieu"
+              onclick="closeMobileNav()"
+              >Giới Thiệu</a
+            >
+            <a
+              class="text-sm font-medium text-slate-300 hover:text-brand-blue transition-colors py-2"
+              href="#lien-he"
+              onclick="closeMobileNav()"
+              >Liên Hệ</a
+            >
+          </div>
+        </nav>
+      </header>
+      <main class="flex-1">
+        <!-- Hero Section -->
+        <section
+          class="relative h-[400px] sm:h-[550px] md:h-[650px] flex items-center justify-center overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-cover bg-center"
+            data-alt="Modern automated conveyor production line background"
+            style="
+              background-image:
+                linear-gradient(
+                  to bottom,
+                  rgba(15, 23, 42, 0.9),
+                  rgba(15, 23, 42, 0.7)
+                ),
+                url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDkRbRr-RZSVG7SbFmqixTtHj0ZdGsWBp6OS_gxd0yoW-bGoy2CYXIIfuiMKaW7CKv6olp1DKaWkewHCUAxuDWJS_WmhVitzU1CfizIiTSCZtFM5tEqsnRc1PYLMjqIi0WASSe6q-5B_1wFzbx0DSniQIxqrW1GRQadhwRAlnBd7-PGg69SZcQLBc5zKkFxzmu1-wELlYNV8lGNpHzcuKxejU5diifnVHxvtKWflwgUUsE7FmWZXbcmvCf73u6lIaN2DJwUNQ32XPQ&quot;);
+            "
+          ></div>
+          <div
+            class="container relative z-10 mx-auto px-4 text-center max-w-4xl"
+          >
+            <div class="reveal active">
+              <span
+                class="inline-block px-3 sm:px-4 py-1 rounded-full bg-brand-blue/20 text-brand-blue text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4 sm:mb-6 border border-brand-blue/30"
+              >
+                Hơn mười năm kinh nghiệm trong ngành
+              </span>
+              <h1
+                class="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight mb-4 sm:mb-6 tracking-tight"
+              >
+                Thiết Bị & Phụ Kiện Băng Tải
+              </h1>
+              <p
+                class="text-sm sm:text-base md:text-lg text-slate-400 mb-6 sm:mb-10 leading-relaxed max-w-2xl mx-auto"
+              >
+                Chuyên cung cấp bộ đếm sản phẩm băng tải và bánh xe con lăn nhựa
+                HDPE — phục vụ dây chuyền sản xuất, đóng gói, kiểm đếm hàng hóa
+                và hệ thống logistics.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  class="bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-lg btn-hover-lift transition-all"
+                >
+                  <a href="#san-pham">Xem Sản Phẩm</a>
+                </button>
+                <button
+                  class="bg-white/5 hover:bg-white/10 backdrop-blur-md text-white border border-white/20 font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-lg btn-hover-lift transition-all"
+                >
+                  <a href="#lien-he">Liên Hệ Tư Vấn</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Product Tabs Section -->
+        <section
+          id="san-pham"
+          class="py-12 sm:py-16 md:py-24 container mx-auto px-4 md:px-10 lg:px-40"
+        >
+          <div class="text-center mb-10 sm:mb-16 reveal">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white mb-4"
+            >
+              Sản Phẩm Của Chúng Tôi
+            </h2>
+            <p
+              class="text-slate-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto"
+            >
+              Bộ đếm sản phẩm và bánh xe con lăn — hai giải pháp thiết yếu cho
+              mọi dây chuyền băng tải công nghiệp.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-10 sm:gap-16">
+            <!-- Product 1: Bộ đếm sản phẩm -->
+            <div
+              class="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center reveal"
+            >
+              <div class="space-y-4 sm:space-y-6">
+                <div>
+                  <span
+                    class="inline-block px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-wider mb-3 border border-brand-blue/20"
+                    >Bán chạy</span
+                  >
+                  <h3
+                    class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2"
+                  >
+                    Bộ Đếm Sản Phẩm Băng Tải
+                  </h3>
+                  <h4
+                    class="text-sm sm:text-base md:text-lg font-medium text-brand-blue"
+                  >
+                    Đếm chính xác đến từng sản phẩm — không bỏ sót
+                  </h4>
+                </div>
+                <p
+                  class="text-slate-400 leading-relaxed text-sm sm:text-base md:text-lg"
+                >
+                  Nguồn cấp 12VDC, kích thước 430 × 190 mm, sử dụng cảm biến
+                  quang Omron cho độ chính xác cao. Hiển thị 04 LED 7 đoạn 4
+                  inch, độ sáng cao, dễ quan sát từ xa. Dải đếm 0–9999 sản phẩm.
+                </p>
+                <ul class="space-y-2 sm:space-y-3">
+                  <li
+                    class="flex items-start gap-2 sm:gap-3 text-slate-300 text-sm sm:text-base"
+                  >
+                    <span
+                      class="material-symbols-outlined text-brand-blue text-base sm:text-lg mt-0.5"
+                      >check_circle</span
+                    >
+                    Cảm biến quang Omron — ổn định trong môi trường công nghiệp
+                  </li>
+                  <li
+                    class="flex items-start gap-2 sm:gap-3 text-slate-300 text-sm sm:text-base"
+                  >
+                    <span
+                      class="material-symbols-outlined text-brand-blue text-base sm:text-lg mt-0.5"
+                      >check_circle</span
+                    >
+                    Nút SET 0 & trả ngược hiệu chỉnh số lượng
+                  </li>
+                  <li
+                    class="flex items-start gap-2 sm:gap-3 text-slate-300 text-sm sm:text-base"
+                  >
+                    <span
+                      class="material-symbols-outlined text-brand-blue text-base sm:text-lg mt-0.5"
+                      >check_circle</span
+                    >
+                    Cài đặt thời gian chống nhiễu theo tốc độ băng tải
+                  </li>
+                </ul>
+                <button
+                  onclick="openSpecsModal('counter')"
+                  class="flex items-center gap-2 bg-brand-blue text-white font-semibold sm:font-bold text-xs sm:text-sm md:text-base py-2.5 sm:py-3.5 px-4 sm:px-8 rounded-lg hover:bg-blue-600 btn-hover-lift transition-all group"
+                >
+                  <span class="material-symbols-outlined text-base sm:text-lg"
+                    >info</span
+                  >
+                  <span>Chi Tiết Thông Số & Hình Ảnh</span>
+                  <span
+                    class="material-symbols-outlined text-xs sm:text-sm group-hover:translate-x-1 transition-transform"
+                    >arrow_forward</span
+                  >
+                </button>
+              </div>
+              <div
+                class="relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-slate-800 hover-lift"
+              >
+                <img
+                  alt="Bộ đếm sản phẩm băng tải với màn hình LED"
+                  class="w-full h-full object-cover"
+                  src="assets/counter/1.jpeg"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background-dark/40 to-transparent"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="border-slate-800 reveal" />
+
+            <!-- Product 2: Bánh xe con lăn -->
+            <div
+              class="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center reveal"
+            >
+              <div class="md:order-2 space-y-4 sm:space-y-6">
+                <div>
+                  <h3
+                    class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2"
+                  >
+                    Bánh Xe Con Lăn Nhựa HDPE
+                  </h3>
+                  <h4
+                    class="text-sm sm:text-base md:text-lg font-medium text-brand-blue"
+                  >
+                    Vận hành êm ái — bền bỉ trong logistics
+                  </h4>
+                </div>
+                <p
+                  class="text-slate-400 leading-relaxed text-sm sm:text-base md:text-lg"
+                >
+                  Nhựa HDPE chính phẩm, đường kính ngoài 49mm, lỗ cốt 10mm,
+                  chiều dày 23mm. Ma sát thấp, vận hành êm, ít hao mòn — lắp đặt
+                  trong hệ thống thang lăn / máng lăn vận chuyển hàng hóa bằng
+                  trọng lực.
+                </p>
+                <ul class="space-y-2 sm:space-y-3">
+                  <li
+                    class="flex items-start gap-2 sm:gap-3 text-slate-300 text-sm sm:text-base"
+                  >
+                    <span
+                      class="material-symbols-outlined text-brand-blue text-base sm:text-lg mt-0.5"
+                      >check_circle</span
+                    >
+                    HDPE chính phẩm — chịu mài mòn, tuổi thọ cao
+                  </li>
+                  <li
+                    class="flex items-start gap-2 sm:gap-3 text-slate-300 text-sm sm:text-base"
+                  >
+                    <span
+                      class="material-symbols-outlined text-brand-blue text-base sm:text-lg mt-0.5"
+                      >check_circle</span
+                    >
+                    49mm × 23mm, lỗ cốt 10mm — lắp đặt dễ dàng
+                  </li>
+                  <li
+                    class="flex items-start gap-2 sm:gap-3 text-slate-300 text-sm sm:text-base"
+                  >
+                    <span
+                      class="material-symbols-outlined text-brand-blue text-base sm:text-lg mt-0.5"
+                      >check_circle</span
+                    >
+                    Kho hàng, bưu kiện, thùng carton, dây chuyền logistics
+                  </li>
+                </ul>
+                <button
+                  onclick="openSpecsModal('roller')"
+                  class="flex items-center gap-2 bg-brand-blue text-white font-semibold sm:font-bold text-xs sm:text-sm md:text-base py-2.5 sm:py-3.5 px-4 sm:px-8 rounded-lg hover:bg-blue-600 btn-hover-lift transition-all group"
+                >
+                  <span class="material-symbols-outlined text-base sm:text-lg"
+                    >info</span
+                  >
+                  <span>Chi Tiết Thông Số & Hình Ảnh</span>
+                  <span
+                    class="material-symbols-outlined text-xs sm:text-sm group-hover:translate-x-1 transition-transform"
+                    >arrow_forward</span
+                  >
+                </button>
+              </div>
+              <div
+                class="md:order-1 relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-slate-800 hover-lift"
+              >
+                <img
+                  alt="Bánh xe con lăn HDPE cho hệ thống logistics"
+                  class="w-full h-full object-cover"
+                  src="assets/roller/1.jpeg"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background-dark/40 to-transparent"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Specs Modal -->
+        <div
+          id="specs-modal"
+          class="modal-overlay"
+          onclick="if (event.target === this) closeSpecsModal();"
+        >
+          <div class="modal-content p-5 sm:p-8 md:p-12">
+            <!-- Modal Header -->
+            <div class="flex items-start justify-between mb-6 sm:mb-8">
+              <div>
+                <h3
+                  id="modal-title"
+                  class="text-xl sm:text-2xl font-bold text-white mb-1"
+                ></h3>
+                <p id="modal-subtitle" class="text-brand-blue font-medium"></p>
+              </div>
+              <button
+                onclick="closeSpecsModal()"
+                class="text-slate-400 hover:text-white transition-colors p-0.5 sm:p-1"
+              >
+                <span class="material-symbols-outlined text-2xl sm:text-3xl"
+                  >close</span
+                >
+              </button>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="mb-6 sm:mb-10">
+              <div
+                class="relative aspect-video rounded-xl overflow-hidden mb-3 sm:mb-4 bg-slate-900"
+              >
+                <img
+                  id="modal-main-img"
+                  class="w-full h-full object-contain"
+                  alt=""
+                  src=""
+                />
+              </div>
+              <div
+                id="modal-thumbnails"
+                class="flex gap-3 overflow-x-auto pb-2"
+              ></div>
+            </div>
+
+            <!-- Video (if available) -->
+            <div id="modal-video-section" class="mb-6 sm:mb-10 hidden">
+              <h4
+                class="text-lg font-bold text-white mb-4 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-brand-blue"
+                  >play_circle</span
+                >
+                Video Sản Phẩm
+              </h4>
+              <div
+                class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-slate-700"
+              >
+                <video
+                  id="modal-video"
+                  class="w-full h-full"
+                  controls
+                  playsinline
+                ></video>
+              </div>
+            </div>
+
+            <!-- Specs Table -->
+            <div class="mb-6 sm:mb-10">
+              <h4
+                class="text-lg font-bold text-white mb-4 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-brand-blue"
+                  >list_alt</span
+                >
+                Bảng Thông Số Kỹ Thuật
+              </h4>
+              <div class="rounded-xl border border-slate-700 overflow-hidden">
+                <table id="modal-specs" class="spec-table"></table>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#lien-he"
+                onclick="closeSpecsModal()"
+                class="flex-1 text-center bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 sm:py-4 px-5 sm:px-8 rounded-lg btn-hover-lift transition-all"
+              >
+                Liên Hệ Báo Giá
+              </a>
+              <button
+                onclick="closeSpecsModal()"
+                class="flex-1 bg-surface-dark text-white font-bold py-3 sm:py-4 px-5 sm:px-8 rounded-lg hover:bg-slate-700 btn-hover-lift transition-all border border-slate-700"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Slogan Section -->
+        <section
+          class="bg-surface-dark py-12 sm:py-16 md:py-20 border-y border-slate-800"
+        >
+          <div class="container mx-auto px-4 text-center max-w-4xl reveal">
+            <span
+              class="material-symbols-outlined text-4xl sm:text-5xl text-brand-blue mb-4 sm:mb-8"
+              >verified_user</span
+            >
+            <h2
+              class="text-xl sm:text-2xl md:text-3xl font-medium text-white italic leading-relaxed"
+            >
+              "Với mỗi sản phẩm, chúng tôi đặt chất lượng và độ tin cậy lên hàng
+              đầu — để dây chuyền của bạn luôn vận hành trơn tru."
+            </h2>
+          </div>
+        </section>
+        <!-- Features Section -->
+        <section class="py-12 sm:py-16 md:py-24 bg-background-dark">
+          <div class="container mx-auto px-4 md:px-10 lg:px-40">
+            <h2
+              class="text-2xl sm:text-3xl font-black text-center mb-10 sm:mb-16 tracking-tight text-white reveal"
+            >
+              Tại sao chọn chúng tôi?
+            </h2>
+            <div
+              class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
+            >
+              <div
+                class="p-5 sm:p-8 rounded-2xl border border-slate-800 bg-surface-dark/30 hover:bg-surface-dark hover-lift transition-all group reveal reveal-delay-1"
+              >
+                <div
+                  class="h-11 w-11 sm:h-14 sm:w-14 rounded-xl bg-brand-blue/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-blue transition-all"
+                >
+                  <span
+                    class="material-symbols-outlined text-brand-blue group-hover:text-white text-2xl sm:text-3xl"
+                    >settings_input_component</span
+                  >
+                </div>
+                <h3
+                  class="text-base sm:text-xl font-bold mb-2 sm:mb-4 text-white"
+                >
+                  Linh kiện chính hãng
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  Cảm biến Omron chính hãng, nhựa HDPE chính phẩm — mỗi chi tiết
+                  đều được chọn lọc kỹ càng.
+                </p>
+              </div>
+              <div
+                class="p-5 sm:p-8 rounded-2xl border border-slate-800 bg-surface-dark/30 hover:bg-surface-dark hover-lift transition-all group reveal reveal-delay-2"
+              >
+                <div
+                  class="h-11 w-11 sm:h-14 sm:w-14 rounded-xl bg-brand-blue/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-blue transition-all"
+                >
+                  <span
+                    class="material-symbols-outlined text-brand-blue group-hover:text-white text-2xl sm:text-3xl"
+                    >speed</span
+                  >
+                </div>
+                <h3
+                  class="text-base sm:text-xl font-bold mb-2 sm:mb-4 text-white"
+                >
+                  Độ chính xác cao
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  Bộ đếm chính xác đến từng sản phẩm, con lăn ma sát thấp vận
+                  hành êm ái trên dây chuyền.
+                </p>
+              </div>
+              <div
+                class="p-5 sm:p-8 rounded-2xl border border-slate-800 bg-surface-dark/30 hover:bg-surface-dark hover-lift transition-all group reveal reveal-delay-3"
+              >
+                <div
+                  class="h-11 w-11 sm:h-14 sm:w-14 rounded-xl bg-brand-blue/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-blue transition-all"
+                >
+                  <span
+                    class="material-symbols-outlined text-brand-blue group-hover:text-white text-2xl sm:text-3xl"
+                    >shield</span
+                  >
+                </div>
+                <h3
+                  class="text-base sm:text-xl font-bold mb-2 sm:mb-4 text-white"
+                >
+                  Tập trung vào độ bền
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  Thiết kế cho môi trường công nghiệp khắc nghiệt, hoạt động ổn
+                  định 24/7.
+                </p>
+              </div>
+              <div
+                class="p-5 sm:p-8 rounded-2xl border border-slate-800 bg-surface-dark/30 hover:bg-surface-dark hover-lift transition-all group reveal reveal-delay-4"
+              >
+                <div
+                  class="h-11 w-11 sm:h-14 sm:w-14 rounded-xl bg-brand-blue/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-blue transition-all"
+                >
+                  <span
+                    class="material-symbols-outlined text-brand-blue group-hover:text-white text-2xl sm:text-3xl"
+                    >support_agent</span
+                  >
+                </div>
+                <h3
+                  class="text-base sm:text-xl font-bold mb-2 sm:mb-4 text-white"
+                >
+                  Hỗ trợ tư vấn
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  Đội ngũ kỹ thuật sẵn sàng tư vấn lắp đặt và bảo trì tận nơi
+                  nhanh chóng.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Story Section -->
+        <section
+          id="gioi-thieu"
+          class="py-12 sm:py-16 md:py-24 bg-surface-dark/20 border-y border-slate-800"
+        >
+          <div class="container mx-auto px-4 md:px-10 lg:px-40 max-w-5xl">
+            <div
+              class="bg-surface-dark p-6 sm:p-10 md:p-16 rounded-2xl sm:rounded-3xl border border-slate-700/50 shadow-2xl relative overflow-hidden reveal"
+            >
+              <div
+                class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-3xl -mr-32 -mt-32"
+              ></div>
+              <h2
+                class="text-2xl sm:text-3xl font-black mb-6 sm:mb-8 tracking-tight border-l-4 border-brand-blue pl-4 sm:pl-6 text-white"
+              >
+                Về Phúc Nguyễn Sinco
+              </h2>
+              <div class="prose prose-lg prose-invert max-w-none">
+                <p class="text-slate-300 leading-loose text-base sm:text-lg">
+                  Chúng tôi chuyên cung cấp bộ đếm sản phẩm băng tải và bánh xe
+                  con lăn nhựa HDPE phục vụ các dây chuyền sản xuất, đóng gói và
+                  hệ thống logistics trên toàn quốc. Với kinh nghiệm thực tế
+                  trong ngành, chúng tôi hiểu rõ nhu cầu vận hành của khách hàng
+                  — từ đó tư vấn giải pháp phù hợp, giao hàng nhanh và hỗ trợ kỹ
+                  thuật tận nơi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Simplified Contact Section -->
+        <section
+          id="lien-he"
+          class="py-12 sm:py-16 md:py-24 bg-background-dark"
+        >
+          <div class="container mx-auto px-4 md:px-10 lg:px-40">
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-16 reveal">
+              <h2
+                class="text-2xl sm:text-3xl md:text-4xl font-black mb-4 tracking-tight text-white"
+              >
+                Liên Hệ Với Chúng Tôi
+              </h2>
+              <p class="text-slate-400 text-sm sm:text-base md:text-lg">
+                Đội ngũ của chúng tôi luôn sẵn sàng hỗ trợ bạn với các giải pháp
+                kỹ thuật tốt nhất.
+              </p>
+            </div>
+            <div
+              class="flex flex-col md:flex-row justify-center gap-8 sm:gap-12 md:gap-32"
+            >
+              <div
+                class="flex items-start gap-4 sm:gap-6 reveal reveal-delay-1"
+              >
+                <div
+                  class="bg-brand-blue/10 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-brand-blue/20 flex-shrink-0"
+                >
+                  <span
+                    class="material-symbols-outlined text-brand-blue text-2xl sm:text-4xl"
+                    >location_on</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="text-base sm:text-xl font-bold mb-1 sm:mb-2 text-white"
+                  >
+                    Địa chỉ
+                  </p>
+                  <p class="text-slate-400 leading-relaxed text-sm sm:text-lg">
+                    Quận Bình Tân TP.HCM
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 sm:gap-6 reveal reveal-delay-2"
+              >
+                <div
+                  class="bg-brand-blue/10 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-brand-blue/20 flex-shrink-0"
+                >
+                  <span
+                    class="material-symbols-outlined text-brand-blue text-2xl sm:text-4xl"
+                    >call</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="text-base sm:text-xl font-bold mb-1 sm:mb-2 text-white"
+                  >
+                    Điện thoại
+                  </p>
+                  <a
+                    href="tel:+84908893082"
+                    class="text-white text-xl sm:text-2xl font-bold tracking-wide hover:text-brand-blue transition-colors"
+                  >
+                    (+84)908893082
+                  </a>
+                  <p class="text-sm text-brand-blue mt-2 font-medium"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer
+        class="bg-background-dark text-slate-500 py-10 sm:py-16 border-t border-slate-800"
+      >
+        <div class="container mx-auto px-4 md:px-10 lg:px-40">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-10 border-b border-slate-800/50 pb-10 sm:pb-16 mb-8 sm:mb-12 reveal"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="text-lg sm:text-2xl font-black tracking-tight text-white"
+                >Phúc Nguyễn Sinco</span
+              >
+            </div>
+            <div class="flex gap-6 sm:gap-10 flex-wrap justify-center">
+              <a
+                class="text-sm sm:text-base text-slate-400 hover:text-white transition-colors font-medium"
+                href="#san-pham"
+                >Sản Phẩm</a
+              >
+              <a
+                class="text-sm sm:text-base text-slate-400 hover:text-white transition-colors font-medium"
+                href="#gioi-thieu"
+                >Về Chúng Tôi</a
+              >
+              <a
+                class="text-sm sm:text-base text-slate-400 hover:text-white transition-colors font-medium"
+                href="#lien-he"
+                >Liên Hệ</a
+              >
+            </div>
+            <div class="flex gap-4 sm:gap-5">
+              <button
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-surface-dark hover:text-white btn-hover-lift transition-all"
+              >
+                <span class="material-symbols-outlined text-lg sm:text-xl"
+                  >social_leaderboard</span
+                >
+              </button>
+              <button
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-surface-dark hover:text-white btn-hover-lift transition-all"
+              >
+                <span class="material-symbols-outlined text-lg sm:text-xl"
+                  >share</span
+                >
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold text-slate-600 uppercase tracking-[0.2em] reveal"
+          >
+            <p>© 2025 PHÚC NGUYỄN SINCO. ALL RIGHTS RESERVED.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

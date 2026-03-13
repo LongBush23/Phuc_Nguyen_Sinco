@@ -1,0 +1,84 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%"   stop-color="#e8c35a"/>
+    <stop offset="50%"  stop-color="#c8902a"/>
+    <stop offset="100%" stop-color="#a06820"/>
+  </linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%"   stop-color="#f0d070"/>
+    <stop offset="100%" stop-color="#b07820"/>
+  </linearGradient>
+</defs>
+
+<!-- Background circle -->
+<circle cx="32" cy="32" r="31" fill="#1a1209"/>
+
+<!-- Large gear: cx=28, cy=34, r=20 -->
+<g transform="translate(28,34)">
+  <circle r="19" fill="url(#g1)" stroke="#a07020" stroke-width="0.5"/>
+  <circle r="14" fill="#1a1209" stroke="#c09030" stroke-width="0.4"/>
+  <circle r="5"  fill="url(#g1)" stroke="#a07020" stroke-width="0.4"/>
+  <circle r="2"  fill="#1a1209"/>
+  <g fill="url(#g1)" stroke="#a07020" stroke-width="0.3">
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(22.5)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(45)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(67.5)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(90)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(112.5)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(135)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(157.5)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(180)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(202.5)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(225)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(247.5)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(270)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(292.5)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(315)"/>
+    <rect x="-2.5" y="-22.5" width="5" height="5" rx="1" transform="rotate(337.5)"/>
+  </g>
+  <line x1="0" y1="-13" x2="0"   y2="13"  stroke="#c09030" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="-13" y1="0" x2="13"  y2="0"   stroke="#c09030" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+</g>
+
+<!-- Small gear: cx=46, cy=16, r=10 -->
+<g transform="translate(46,16)">
+  <circle r="9.5" fill="url(#g2)" stroke="#a07020" stroke-width="0.4"/>
+  <circle r="6.5" fill="#1a1209" stroke="#c09030" stroke-width="0.3"/>
+  <circle r="2.5" fill="url(#g2)" stroke="#a07020" stroke-width="0.3"/>
+  <circle r="1"   fill="#1a1209"/>
+  <g fill="url(#g2)" stroke="#a07020" stroke-width="0.2">
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(30)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(60)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(90)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(120)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(150)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(180)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(210)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(240)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(270)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(300)"/>
+    <rect x="-2" y="-12.5" width="4" height="4" rx="0.8" transform="rotate(330)"/>
+  </g>
+</g>
+
+<!-- Tiny gear: cx=50, cy=49, r=7 -->
+<g transform="translate(50,49)">
+  <circle r="6.5" fill="url(#g1)" stroke="#a07020" stroke-width="0.3"/>
+  <circle r="4"   fill="#1a1209" stroke="#c09030" stroke-width="0.3"/>
+  <circle r="1.5" fill="url(#g1)"/>
+  <g fill="url(#g1)" stroke="#a07020" stroke-width="0.2">
+    <rect x="-1.8" y="-9"  width="3.6" height="3.5" rx="0.7"/>
+    <rect x="-1.8" y="-9"  width="3.6" height="3.5" rx="0.7" transform="rotate(40)"/>
+    <rect x="-1.8" y="-9"  width="3.6" height="3.5" rx="0.7" transform="rotate(80)"/>
+    <rect x="-1.8" y="-9"  width="3.6" height="3.5" rx="0.7" transform="rotate(120)"/>
+    <rect x="-1.8" y="-9"  width="3.6" height="3.5" rx="0.7" transform="rotate(160)"/>
+    <rect x="-1.8" y="-9"  width="3.6" height="3.5" rx="0.7" transform="rotate(200)"/>
+    <rect x="-1.8" y="-9"  width="3.6" height="3.5" rx="0.7" transform="rotate(240)"/>
+    <rect x="-1.8" y="-9"  width="3.6" height="3.5" rx="0.7" transform="rotate(280)"/>
+    <rect x="-1.8" y="-9"  width="3.6" height="3.5" rx="0.7" transform="rotate(320)"/>
+  </g>
+</g>
+</svg>
