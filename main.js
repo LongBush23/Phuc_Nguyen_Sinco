@@ -32,8 +32,7 @@ const PRODUCT_DATA = {
       "assets/counter/2.jpeg",
       "assets/counter/3.jpeg",
       "assets/counter/4.jpeg",
-      "assets/53367e30-c2ef-4127-8aae-a12725c3ea6d.jpeg",
-      "assets/b6db6d65-9553-47ad-95ad-bd542e5cc060.jpeg",
+      "assets/counter/5.jpeg",
     ],
     video: null,
     specs: [
@@ -58,6 +57,7 @@ const PRODUCT_DATA = {
       "assets/roller/1.jpeg",
       "assets/roller/2.jpeg",
       "assets/roller/specs.jpeg",
+      "assets/roller/3.jpeg",
     ],
     video: null,
     specs: [
