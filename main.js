@@ -32,8 +32,10 @@ const PRODUCT_DATA = {
       "assets/counter/2.jpeg",
       "assets/counter/3.jpeg",
       "assets/counter/4.jpeg",
+      "assets/53367e30-c2ef-4127-8aae-a12725c3ea6d.jpeg",
+      "assets/b6db6d65-9553-47ad-95ad-bd542e5cc060.jpeg",
     ],
-    video: "assets/counter/video.mp4",
+    video: null,
     specs: [
       ["Nguồn cấp", "12VDC"],
       ["Kích thước", "430 × 190 mm"],
@@ -57,7 +59,7 @@ const PRODUCT_DATA = {
       "assets/roller/2.jpeg",
       "assets/roller/specs.jpeg",
     ],
-    video: "assets/roller/video.mp4",
+    video: null,
     specs: [
       ["Chất liệu", "Nhựa HDPE chính phẩm, chịu mài mòn tốt"],
       ["Đường kính ngoài", "49 mm"],
@@ -101,21 +103,9 @@ function openSpecsModal(productKey) {
     )
     .join("");
 
-  // Video — defer loading until after animation to avoid lag
+  // Video section hidden (videos now on main page)
   const videoSection = document.getElementById("modal-video-section");
-  const videoEl = document.getElementById("modal-video");
-  if (data.video) {
-    videoSection.classList.remove("hidden");
-    const videoSrc = data.video;
-    setTimeout(() => {
-      videoEl.src = videoSrc;
-      videoEl.load();
-    }, 300);
-  } else {
-    videoSection.classList.add("hidden");
-    videoEl.pause();
-    videoEl.src = "";
-  }
+  if (videoSection) videoSection.classList.add("hidden");
 
   // Specs table
   document.getElementById("modal-specs").innerHTML = data.specs

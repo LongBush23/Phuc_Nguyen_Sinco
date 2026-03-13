@@ -28,7 +28,7 @@
         <div
           class="container mx-auto px-4 md:px-10 lg:px-40 flex h-16 items-center justify-between"
         >
-          <div class="flex items-center gap-3">
+          <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <img
               alt="Phúc Nguyễn Sinco Logo"
               class="h-8 w-auto"
@@ -38,7 +38,7 @@
             <span class="text-lg font-bold tracking-tight text-white"
               >Phúc Nguyễn Sinco</span
             >
-          </div>
+          </a>
           <!-- Desktop Nav -->
           <nav class="hidden md:flex items-center gap-8">
             <a
@@ -176,16 +176,26 @@
               class="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center reveal"
             >
               <div
-                class="order-1 md:order-1 relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-slate-800 hover-lift"
+                onclick="openSpecsModal('counter')"
+                class="order-1 md:order-1 relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-slate-800 hover-lift cursor-pointer group"
               >
-                <img
-                  alt="Bộ đếm sản phẩm băng tải với màn hình LED"
+                <video
                   class="w-full h-full object-cover"
-                  src="assets/counter/1.jpeg"
-                />
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="assets/counter/video.mp4" type="video/mp4" />
+                </video>
                 <div
-                  class="absolute inset-0 bg-gradient-to-t from-background-dark/40 to-transparent"
+                  class="absolute inset-0 bg-gradient-to-t from-background-dark/40 to-transparent group-hover:from-background-dark/60 transition-all"
                 ></div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">play_circle</span>
+                </div>
               </div>
               <div class="order-2 md:order-2 space-y-4 sm:space-y-6">
                 <div>
@@ -194,7 +204,8 @@
                     >Bán chạy</span
                   >
                   <h3
-                    class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2"
+                    onclick="openSpecsModal('counter')"
+                    class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2 cursor-pointer hover:text-brand-blue transition-colors"
                   >
                     Bộ Đếm Sản Phẩm Băng Tải
                   </h3>
@@ -264,21 +275,32 @@
               class="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center reveal"
             >
               <div
-                class="order-1 md:order-1 relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-slate-800 hover-lift"
+                onclick="openSpecsModal('roller')"
+                class="order-1 md:order-1 relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-slate-800 hover-lift cursor-pointer group"
               >
-                <img
-                  alt="Bánh xe con lăn HDPE cho hệ thống logistics"
+                <video
                   class="w-full h-full object-cover"
-                  src="assets/roller/1.jpeg"
-                />
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="assets/roller/video.mp4" type="video/mp4" />
+                </video>
                 <div
-                  class="absolute inset-0 bg-gradient-to-t from-background-dark/40 to-transparent"
+                  class="absolute inset-0 bg-gradient-to-t from-background-dark/40 to-transparent group-hover:from-background-dark/60 transition-all"
                 ></div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">play_circle</span>
+                </div>
               </div>
               <div class="order-2 md:order-2 space-y-4 sm:space-y-6">
                 <div>
                   <h3
-                    class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2"
+                    onclick="openSpecsModal('roller')"
+                    class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2 cursor-pointer hover:text-brand-blue transition-colors"
                   >
                     Bánh Xe Con Lăn Nhựa HDPE
                   </h3>
