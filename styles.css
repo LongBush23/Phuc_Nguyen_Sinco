@@ -27,26 +27,17 @@
 
 /* ===== Hover Lift Effects ===== */
 .hover-lift {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .hover-lift:hover {
   transform: translateY(-5px);
-  box-shadow:
-    0 10px 25px -5px rgba(0, 0, 0, 0.3),
-    0 8px 10px -6px rgba(0, 0, 0, 0.3);
 }
 
 .btn-hover-lift {
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.15s ease;
 }
 .btn-hover-lift:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
 }
 
 /* ===== Product Tabs ===== */
@@ -104,6 +95,9 @@
   transition: transform 0.25s ease;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   will-change: transform;
+  /* iOS safe area support */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 .modal-overlay.open .modal-content {
   transform: translateY(0);
@@ -187,8 +181,10 @@
   .modal-content {
     width: 100%;
     max-height: 100vh;
+    max-height: 100dvh; /* Dynamic viewport height for mobile browsers */
     border-radius: 1rem 1rem 0 0;
     margin: 0;
+    padding-top: max(env(safe-area-inset-top), 8px);
   }
   .modal-overlay {
     align-items: flex-end;
@@ -220,4 +216,15 @@
     transform: none;
     box-shadow: none;
   }
+}
+
+/* Touch optimization */
+button, a {
+  -webkit-tap-highlight-color: rgba(59, 130, 246, 0.3);
+  touch-action: manipulation;
+}
+
+/* Active state for better feedback */
+button:active, a:active {
+  opacity: 0.8;
 }

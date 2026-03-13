@@ -136,12 +136,12 @@
               </p>
               <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  class="bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-lg btn-hover-lift transition-all"
+                  class="bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-lg transition-all active:scale-95"
                 >
                   <a href="#san-pham">Xem Sản Phẩm</a>
                 </button>
                 <button
-                  class="bg-white/5 hover:bg-white/10 backdrop-blur-md text-white border border-white/20 font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-lg btn-hover-lift transition-all"
+                  class="bg-white/5 hover:bg-white/10 backdrop-blur-md text-white border border-white/20 font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-lg transition-all active:scale-95"
                 >
                   <a href="#lien-he">Liên Hệ Tư Vấn</a>
                 </button>
@@ -228,7 +228,7 @@
                 </ul>
                 <button
                   onclick="openSpecsModal('counter')"
-                  class="flex items-center gap-2 bg-brand-blue text-white font-semibold sm:font-bold text-xs sm:text-sm md:text-base py-2.5 sm:py-3.5 px-4 sm:px-8 rounded-lg hover:bg-blue-600 btn-hover-lift transition-all group"
+                  class="flex items-center gap-2 bg-brand-blue text-white font-semibold sm:font-bold text-xs sm:text-sm md:text-base py-2.5 sm:py-3.5 px-4 sm:px-8 rounded-lg hover:bg-blue-600 transition-all group active:scale-95"
                 >
                   <span class="material-symbols-outlined text-base sm:text-lg"
                     >info</span
@@ -313,7 +313,7 @@
                 </ul>
                 <button
                   onclick="openSpecsModal('roller')"
-                  class="flex items-center gap-2 bg-brand-blue text-white font-semibold sm:font-bold text-xs sm:text-sm md:text-base py-2.5 sm:py-3.5 px-4 sm:px-8 rounded-lg hover:bg-blue-600 btn-hover-lift transition-all group"
+                  class="flex items-center gap-2 bg-brand-blue text-white font-semibold sm:font-bold text-xs sm:text-sm md:text-base py-2.5 sm:py-3.5 px-4 sm:px-8 rounded-lg hover:bg-blue-600 transition-all group active:scale-95"
                 >
                   <span class="material-symbols-outlined text-base sm:text-lg"
                     >info</span
@@ -347,19 +347,24 @@
           class="modal-overlay"
           onclick="if (event.target === this) closeSpecsModal();"
         >
+          <!-- Tap outside hint -->
+          <div class="absolute top-4 left-1/2 -translate-x-1/2 bg-slate-800/90 text-white text-xs px-3 py-1.5 rounded-full backdrop-blur-sm md:hidden opacity-70">
+            Chạm bên ngoài để đóng
+          </div>
           <div class="modal-content p-5 sm:p-8 md:p-12">
             <!-- Modal Header -->
-            <div class="flex items-start justify-between mb-6 sm:mb-8">
-              <div>
+            <div class="flex items-start justify-between mb-6 sm:mb-8 sticky top-0 bg-surface-dark z-10 -mx-5 sm:-mx-8 md:-mx-12 px-5 sm:px-8 md:px-12 py-4 sm:py-5 border-b border-slate-700/50">
+              <div class="flex-1 pr-4">
                 <h3
                   id="modal-title"
-                  class="text-xl sm:text-2xl font-bold text-white mb-1"
+                  class="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1"
                 ></h3>
-                <p id="modal-subtitle" class="text-brand-blue font-medium"></p>
+                <p id="modal-subtitle" class="text-sm sm:text-base text-brand-blue font-medium"></p>
               </div>
               <button
                 onclick="closeSpecsModal()"
-                class="text-slate-400 hover:text-white transition-colors p-0.5 sm:p-1"
+                class="flex-shrink-0 text-slate-400 hover:text-white transition-colors p-2 sm:p-2.5 -mr-2 hover:bg-slate-700/50 rounded-lg"
+                aria-label="Đóng"
               >
                 <span class="material-symbols-outlined text-2xl sm:text-3xl"
                   >close</span
@@ -423,17 +428,17 @@
             </div>
 
             <!-- CTA -->
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
                 href="#lien-he"
                 onclick="closeSpecsModal()"
-                class="flex-1 text-center bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 sm:py-4 px-5 sm:px-8 rounded-lg btn-hover-lift transition-all"
+                class="flex-1 text-center bg-brand-blue hover:bg-blue-600 text-white font-bold py-4 sm:py-4 px-5 sm:px-8 rounded-lg transition-all active:scale-95"
               >
                 Liên Hệ Báo Giá
               </a>
               <button
                 onclick="closeSpecsModal()"
-                class="flex-1 bg-surface-dark text-white font-bold py-3 sm:py-4 px-5 sm:px-8 rounded-lg hover:bg-slate-700 btn-hover-lift transition-all border border-slate-700"
+                class="flex-1 bg-surface-dark text-white font-bold py-4 sm:py-4 px-5 sm:px-8 rounded-lg hover:bg-slate-700 transition-all border border-slate-700 active:scale-95"
               >
                 Đóng
               </button>
@@ -689,14 +694,14 @@
             </div>
             <div class="flex gap-4 sm:gap-5">
               <button
-                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-surface-dark hover:text-white btn-hover-lift transition-all"
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-surface-dark hover:text-white transition-all active:scale-95"
               >
                 <span class="material-symbols-outlined text-lg sm:text-xl"
                   >social_leaderboard</span
                 >
               </button>
               <button
-                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-surface-dark hover:text-white btn-hover-lift transition-all"
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-surface-dark hover:text-white transition-all active:scale-95"
               >
                 <span class="material-symbols-outlined text-lg sm:text-xl"
                   >share</span
