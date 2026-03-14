@@ -97,8 +97,8 @@ function openSpecsModal(productKey) {
   thumbContainer.innerHTML = data.images
     .map(
       (src, i) =>
-        `<button class="gallery-thumb flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 ${i === 0 ? "active" : ""}" onclick="selectThumb(this, '${src.replace(/'/g, "\\'")}')">
-          <img src="${src}" alt="Ảnh ${i + 1}" class="w-full h-full object-cover rounded-lg" />
+        `<button class="gallery-thumb flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 ${i === 0 ? "active" : ""}" onclick="selectThumb(this, '${src.replace(/'/g, "\\'")}', '${data.title} - Hình ${i + 1}')">
+          <img src="${src}" alt="${data.title} - Hình ${i + 1}" class="w-full h-full object-cover rounded-lg" />
         </button>`,
     )
     .join("");
@@ -126,12 +126,14 @@ function closeSpecsModal() {
   videoEl.src = "";
 }
 
-function selectThumb(btn, src) {
+function selectThumb(btn, src, altText) {
   document
     .querySelectorAll(".gallery-thumb")
     .forEach((t) => t.classList.remove("active"));
   btn.classList.add("active");
-  document.getElementById("modal-main-img").src = src;
+  const mainImg = document.getElementById("modal-main-img");
+  mainImg.src = src;
+  mainImg.alt = altText || "Hình ảnh chi tiết sản phẩm";
 }
 
 // Close modal on Escape key
