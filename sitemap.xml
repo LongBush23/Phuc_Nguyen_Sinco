@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Product Images -->
+    <image:image>
+      <image:loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/assets/counter/1.jpeg</image:loc>
+      <image:title>Bộ Đếm Sản Phẩm Băng Tải - Màn hình LED 4 inch</image:title>
+      <image:caption>Bộ đếm sản phẩm băng tải với cảm biến Omron, hiển thị LED 7 đoạn, độ chính xác cao</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/assets/counter/2.jpeg</image:loc>
+      <image:title>Bộ Đếm Sản Phẩm Băng Tải - Góc nghiêng</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/assets/counter/3.jpeg</image:loc>
+      <image:title>Bộ Đếm Sản Phẩm Băng Tải - Chi tiết cảm biến</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/assets/roller/1.jpeg</image:loc>
+      <image:title>Bánh Xe Con Lăn HDPE 49mm - Logistics</image:title>
+      <image:caption>Bánh xe con lăn nhựa HDPE cho hệ thống thang lăn, máng lăn logistics, vận hành êm ái</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/assets/roller/2.jpeg</image:loc>
+      <image:title>Bánh Xe Con Lăn HDPE - Chi tiết kích thước</image:title>
+    </image:image>
+    
+    <!-- Product Videos -->
+    <video:video>
+      <video:thumbnail_loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/assets/counter/1.jpeg</video:thumbnail_loc>
+      <video:title>Video Demo Bộ Đếm Sản Phẩm Băng Tải</video:title>
+      <video:description>Xem video hoạt động thực tế của bộ đếm sản phẩm băng tải với cảm biến Omron</video:description>
+      <video:content_loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/assets/counter/video.mp4</video:content_loc>
+      <video:player_loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/#san-pham</video:player_loc>
+    </video:video>
+    
+    <video:video>
+      <video:thumbnail_loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/assets/roller/1.jpeg</video:thumbnail_loc>
+      <video:title>Video Demo Bánh Xe Con Lăn HDPE</video:title>
+      <video:description>Xem video hoạt động của bánh xe con lăn HDPE trong hệ thống thang lăn logistics</video:description>
+      <video:content_loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/assets/roller/video.mp4</video:content_loc>
+      <video:player_loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/#san-pham</video:player_loc>
+    </video:video>
+  </url>
+  
+  <!-- Anchor Links -->
+  <url>
+    <loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/#san-pham</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/#gioi-thieu</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://longbush23.github.io/Phuc_Nguyen_Sinco/#lien-he</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>

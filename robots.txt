@@ -1,0 +1,27 @@
+# Robots.txt for Phúc Nguyễn Sinco
+# https://longbush23.github.io/Phuc_Nguyen_Sinco/
+
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.config.js$
+
+# Sitemap location
+Sitemap: https://longbush23.github.io/Phuc_Nguyen_Sinco/sitemap.xml
+
+# Crawl-delay for bots (optional, maintains server performance)
+User-agent: *
+Crawl-delay: 0.5
+
+# Allow major search engines full access
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: SemrushBot
+User-agent: AhrefsBot
+User-agent: DotBot
+Crawl-delay: 10
